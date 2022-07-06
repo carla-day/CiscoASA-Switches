@@ -1,7 +1,7 @@
 import requests
 from auth_token import get_token
 
-def device():
+def main():
     api_path = "https://sandboxdnac.cisco/dna"
     headers = {"content-type":"application/json", "X-Auth-Token": get_token()}
     
@@ -20,4 +20,4 @@ def device():
     get_resp.close()
     return devices
 if __name__ == "__main__":
-    device()
+    main()
