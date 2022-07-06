@@ -13,7 +13,7 @@ def main():
     devices = []
     if get_resp.ok:
         for device in get_resp.json()['response']:
-            device.append(f"{'Name: ' + device['id'], 'IP: '+ device['managementIpAddress']}")
+            devices.append(f"Name: {device['id']}, IP:{device['managementIpAddress']}")
             print(f"Id: {device['id']}") 
             print(f"IP: {device['managementIpAddress']}")
 
